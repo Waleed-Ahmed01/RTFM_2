@@ -8,10 +8,9 @@ from train import train
 from test_10crop import test
 import option
 from tqdm import tqdm
-from utils import Visualizer
+
 from config import *
 
-viz = Visualizer(env='shanghai tech 10 crop', use_incoming_socket=False)
 
 if __name__ == '__main__':
     args = option.parser.parse_args()
@@ -64,7 +63,7 @@ if __name__ == '__main__':
 
         if step % 5 == 0 and step > 200:
 
-            auc = test(test_loader, model, args, viz, device)
+            auc = test(test_loader, model, args, device)
             test_info["epoch"].append(step)
             test_info["test_AUC"].append(auc)
 

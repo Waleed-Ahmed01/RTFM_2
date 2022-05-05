@@ -1,9 +1,9 @@
-import matplotlib.pyplot as plt
+
 import torch
 from sklearn.metrics import auc, roc_curve, precision_recall_curve
 import numpy as np
 
-def test(dataloader, model, args, viz, device):
+def test(dataloader, model, args,device):
     with torch.no_grad():
         model.eval()
         pred = torch.zeros(0)
@@ -36,9 +36,5 @@ def test(dataloader, model, args, viz, device):
         pr_auc = auc(recall, precision)
         np.save('precision.npy', precision)
         np.save('recall.npy', recall)
-        viz.plot_lines('pr_auc', pr_auc)
-        viz.plot_lines('auc', rec_auc)
-        viz.lines('scores', pred)
-        viz.lines('roc', tpr, fpr)
         return rec_auc
 

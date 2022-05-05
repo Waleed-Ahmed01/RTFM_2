@@ -13,9 +13,9 @@ class Dataset(data.Dataset):
         self.dataset = args.dataset
         if self.dataset == 'shanghai':
             if test_mode:
-                self.rgb_list_file = 'list/shanghai-i3d-test-10crop.list'
+                self.rgb_list_file = 'shanghai-i3d-test-10crop.list'
             else:
-                self.rgb_list_file = 'list/shanghai-i3d-train-10crop.list'
+                self.rgb_list_file = 'shanghai-i3d-train-10crop.list'
         else:
             if test_mode:
                 self.rgb_list_file = 'list/ucf-i3d-test.list'
