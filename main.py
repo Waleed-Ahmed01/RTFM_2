@@ -8,7 +8,6 @@ from train import train
 from test_10crop import test
 import option
 from tqdm import tqdm
-
 from config import *
 
 
