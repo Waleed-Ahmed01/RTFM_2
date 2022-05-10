@@ -19,9 +19,9 @@ def test(dataloader, model, args,device):
             pred = torch.cat((pred, sig))
 
         if args.dataset == 'shanghai':
-            gt = np.load('list/gt-sh.npy')
+            gt = np.load('gt-sh.npy')
         else:
-            gt = np.load('list/gt-ucf.npy')
+            gt = np.load('gt-ucf.npy')
 
         pred = list(pred.cpu().detach().numpy())
         pred = np.repeat(np.array(pred), 16)

@@ -41,7 +41,7 @@ if __name__ == '__main__':
     test_info = {"epoch": [], "test_AUC": []}
     best_AUC = -1
     output_path = ''   # put your own path here
-    auc = test(test_loader, model, args, viz, device)
+    auc = test(test_loader, model, args, device)
 
     for step in tqdm(
             range(1, args.max_epoch + 1),
