@@ -6,12 +6,12 @@ from scipy.io import loadmat
 from os import walk
 
 '''
-FOR UCF CRIME
+
 '''
-root_path = "/home/yu/yu_ssd/SH_Test_center_crop_i3d/"
-dirs = os.listdir(root_path)
-rgb_list_file ='shanghai-i3d-test.list'
-temporal_root = 'test_frame_mask/'
+#root_path = "/Users/Fast/Documents/sh_test"
+#dirs = os.listdir(root_path)
+rgb_list_file ='shanghai-i3d-test-10crop.list'
+temporal_root = 'sh_test_center/'
 # mat_name_list = os.listdir(temporal_root)
 gt_files = os.listdir(temporal_root)
 file_list = list(open(rgb_list_file))
@@ -20,18 +20,18 @@ gt = []
 index = 0
 total = 0
 abnormal_count =0
-for  file in file_list:
+for file in file_list:
 
     features = np.load(file.strip('\n'), allow_pickle=True)
 
     # features = [t.cpu().detach().numpy() for t in features]
     features = np.array(features, dtype=np.float32)
-    features = np.squeeze(features, axis=1)
+ #   features = np.squeeze(features, axis=1)
 
     num_frame = features.shape[0] * 16
 
     count = 0
-    if index > 43:
+    if index > 9:
         print('normal video' + str(file))
         for i in range(0, num_frame):
             gt.append(0)
@@ -41,6 +41,7 @@ for  file in file_list:
         print('abnormal video' + str(file))
         gt_file = file.split('_i3d.npy')[0] + '.npy'
         gt_file = gt_file.split('/')[-1]
+        print(gt_file)
         if not os.path.isfile(os.path.join(temporal_root, gt_file)):
             print('no such file')
             exit(1)

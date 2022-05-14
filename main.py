@@ -58,7 +58,7 @@ if __name__ == '__main__':
         if (step - 1) % len(train_aloader) == 0:
             loadera_iter = iter(train_aloader)
 
-        train(loadern_iter, loadera_iter, model, args.batch_size, optimizer, viz, device)
+        train(loadern_iter, loadera_iter, model, args.batch_size, optimizer,device)
 
         if step % 5 == 0 and step > 200:
 
