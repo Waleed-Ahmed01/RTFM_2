@@ -16,10 +16,10 @@ if __name__ == '__main__':
     config = Config(args)
 
     train_nloader = DataLoader(Dataset(args, test_mode=False, is_normal=True),
-                               batch_size=args.batch_size, shuffle=True,
+                               batch_size=args.batch_size, shuffle=False,
                                num_workers=0, pin_memory=False, drop_last=True)
     train_aloader = DataLoader(Dataset(args, test_mode=False, is_normal=False),
-                               batch_size=args.batch_size, shuffle=True,
+                               batch_size=args.batch_size, shuffle=False,
                                num_workers=0, pin_memory=False, drop_last=True)
     test_loader = DataLoader(Dataset(args, test_mode=True),
                               batch_size=1, shuffle=False,

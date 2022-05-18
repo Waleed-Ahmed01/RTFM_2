@@ -24,6 +24,7 @@ def test(dataloader, model, args,device):
 
         pred = list(pred.cpu().detach().numpy())
         pred = np.repeat(np.array(pred), 16)
+        print(pred)
 
         fpr, tpr, threshold = roc_curve(list(gt), pred)
         np.save('fpr.npy', fpr)

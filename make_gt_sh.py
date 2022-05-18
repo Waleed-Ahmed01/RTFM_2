@@ -31,7 +31,7 @@ for file in file_list:
     num_frame = features.shape[0] * 16
 
     count = 0
-    if index > 9:
+    if index < 9:
         print('normal video' + str(file))
         for i in range(0, num_frame):
             gt.append(0)
