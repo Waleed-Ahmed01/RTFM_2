@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     test_info = {"epoch": [], "test_AUC": []}
     best_AUC = -1
-    output_path = ''   # put your own path here
+    output_path = '/Users/Fast/PycharmProjects/RTFM_2/best_record'   # put your own path here
     auc = test(test_loader, model, args, device)
 
     for step in tqdm(
