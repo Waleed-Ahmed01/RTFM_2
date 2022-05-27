@@ -4,14 +4,11 @@
     <list default="true" id="80397321-a0be-4408-9afe-5078fc3284c6" name="Changes" comment="18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ckpt/rtfmfinal.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/ckpt/rtfmfinal.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fpr.npy" beforeDir="false" afterPath="$PROJECT_DIR$/fpr.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/option.py" beforeDir="false" afterPath="$PROJECT_DIR$/option.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/precision.npy" beforeDir="false" afterPath="$PROJECT_DIR$/precision.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recall.npy" beforeDir="false" afterPath="$PROJECT_DIR$/recall.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sh_train_list" beforeDir="false" afterPath="$PROJECT_DIR$/sh_train_list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shanghai-i3d-train-10crop.list" beforeDir="false" afterPath="$PROJECT_DIR$/shanghai-i3d-train-10crop.list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shanghai-i3d-test-10crop.list" beforeDir="false" afterPath="$PROJECT_DIR$/shanghai-i3d-test-10crop.list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tpr.npy" beforeDir="false" afterPath="$PROJECT_DIR$/tpr.npy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.utils">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,6 +76,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/make_gt_sh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Fast\anaconda3\envs\RTFM\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,13 +152,15 @@
       <item itemvalue="Python.make_gt_sh" />
       <item itemvalue="Python.test_10crop" />
       <item itemvalue="Python.utils" />
+      <item itemvalue="Python.model" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.utils" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.test_10crop" />
+        <item itemvalue="Python.model" />
         <item itemvalue="Python.make_gt_sh" />
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.test_10crop" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653459551294</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="18">
+      <created>1653477733134</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653477733134</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
