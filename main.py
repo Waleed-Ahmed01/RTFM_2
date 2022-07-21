@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     test_info = {"epoch": [], "test_AUC": []}
     best_AUC = -1
-    output_path = 'Users/Fast/PycharmProjects/RTFM_2/best_record'   # put your own path here
+    output_path = r"C:\Users\Fast\PycharmProjects\RTFM_2\\best_record\\"   # put your own path here
     auc = test(test_loader, model, args, device)
 
     for step in tqdm(
@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
         train(loadern_iter, loadera_iter, model, args.batch_size, optimizer,device)
 
-        if step % 5 == 0 and step > 200:
+        if step % 5 == 0 and step > 0:
 
             auc = test(test_loader, model, args, device)
             test_info["epoch"].append(step)
@@ -70,6 +70,6 @@ if __name__ == '__main__':
                 best_AUC = test_info["test_AUC"][-1]
                 torch.save(model.state_dict(), './ckpt/' + args.model_name + '{}-i3d.pkl'.format(step))
                 save_best_record(test_info, os.path.join(output_path, '{}-step-AUC.txt'.format(step)))
-                print(rec_auc)
+                print(best_AUC)
     torch.save(model.state_dict(), './ckpt/' + args.model_name + 'final.pkl')
 
